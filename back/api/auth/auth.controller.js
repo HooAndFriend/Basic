@@ -65,7 +65,7 @@ exports.register = (req, res) => {
     pool((conn) => {
       conn.query("insert into user_list value(?,?,?)", param, (err, doc) => {
         if (err) console.log(err)
-        res.send({result : true})
+        res.send({ result: true })
       })
       conn.release()
     })
